@@ -1,0 +1,24 @@
+// @font-face {
+//   font-family: 'rubl';
+//   src: url('../fonts/ALSRubl.eot');
+//   src: url('../fonts/ALSRubl.eot?#iefix') format('embedded-opentype'),
+//   url('../fonts/ALSRubl.woff') format('woff'),
+//   url('../fonts/ALSRubl.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// Montserrat
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/frontend/src/fonts/Montserrat/Montserrat-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/frontend/src/fonts/Montserrat/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}

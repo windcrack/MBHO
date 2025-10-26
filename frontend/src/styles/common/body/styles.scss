@@ -1,0 +1,84 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.html-init {
+  scroll-padding-top: var(--padding-scroll);
+  scroll-behavior: smooth;
+
+  font-size: var(--font-size-def);
+
+  //font-size: calc(100vw / 1600);
+
+  @media screen and (min-width: 1921px) {
+    font-size: calc(2000px / 1600);
+  }
+
+  @media screen and (max-width: 1440px) {
+    font-size: calc(100vw / 1440);
+  }
+
+  @media screen and (max-width: 771px) {
+    font-size: calc(100vw / 771);
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: calc(100vw / 386);
+  }
+
+
+}
+
+.body-init{
+  font-family: var(--font-default);
+  color: var(--color-black);
+
+  font-size: 16rem;
+
+  @media screen and (min-width: toRem(851)){
+    display: flex;
+    flex-flow: column;
+  }
+
+  &.body-block,
+  main{
+    overflow: clip;
+  }
+}
+
+.html-init,
+.body-init{
+  scrollbar-gutter: stable;
+}
+
+.pict,
+.icon{
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.icon{
+  svg{
+    @include square(inherit);
+  }
+}
+
+h1{
+  margin: 0;
+}
+
+.hide{
+  display: none !important;
+}
+
+.container{
+  max-width: var(--container-width);
+  width: calc(100% - var(--container-limitation));
+  margin: 0 auto;
+}

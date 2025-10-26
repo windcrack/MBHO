@@ -1,0 +1,153 @@
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr [main]minmax((min(var(--container-width), calc(100% - #{toRem(40)}))), 1fr)[endmain] 1fr;
+  //margin-inline: 20px;
+
+  section{
+	&:not(.full-page, .main-right){
+	  grid-column: main / endmain;
+	}
+  }
+}
+
+.wrapper-inner{
+  max-width: var(--container-width);
+  width: calc(100% - var(--container-limitation));
+  margin: 0 auto;
+}
+
+.full-page{
+  grid-column: 1 / -1;
+}
+
+.section-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: toRem(20);
+}
+
+.top-space{
+  height: var(--header-size);
+  @include min-width(1024px){
+	display: none;
+  }
+}
+
+.main-right{
+  grid-column: main / -1;
+  width: calc(100% + #{toRem(18)});
+  @include min-width(768){
+	width: calc(100% + #{toRem(50)});
+  }
+}
+
+.lines{
+  position: absolute;
+  right: 0;
+  top: toRem(120);
+  opacity: 0.5;
+}
+
+.title{
+  font-weight: 700;
+  font-size: toRem(48);
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.sub-title{
+  font-weight: 700;
+  font-size: toRem(32);
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+
+.title-second{
+  font-weight: 700;
+  font-size: toRem(40);
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.select{
+  //width: min(240rem, 100%);
+  //flex-shrink: 0;
+  position: relative;
+
+  &[open]{
+    .select{
+      &__icon{
+        transform: rotate(180deg);
+        transform-origin: center;
+      }
+    }
+  }
+
+  &__header{
+    border: toRem(3) solid var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: toRem(10);
+    border-radius: toRem(50);
+    line-height: toRem(34);
+    width: min(240rem, 100%);
+    padding-inline: toRem(36);
+
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display:none;
+    }
+  }
+
+  &__title,
+  &__text{
+    font-weight: 700;
+    font-size: toRem(20);
+    font-variant: small-caps;
+    color: var(--color-white);
+  }
+
+  &__icon{
+    display: block;
+    @include square(toRem(20));
+
+    svg{
+      display: block;
+      @include square(inherit);
+    }
+  }
+
+  &__body{
+    position: absolute;
+    inset: 100% 0 auto 0;
+    background: var(--color-blue);
+    border: toRem(3) solid var(--color-white);
+    padding: toRem(5) toRem(36);
+    border-radius: toRem(50);
+    display: flex;
+    flex-flow: column;
+    gap: toRem(10);
+    z-index: 10;
+  }
+}
+
+.tabs{
+  display: flex;
+  align-items: center;
+  gap: toRem(12);
+}
+
+.chip-bg{
+  position: absolute;
+  inset: toRem(-34) toRem(-380) 0 auto;
+  z-index: -1;
+}
+
+.brick{
+  background: var(--color-blue);
+  height: toRem(74);
+}

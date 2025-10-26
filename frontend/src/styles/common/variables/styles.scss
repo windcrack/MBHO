@@ -1,0 +1,30 @@
+:root {
+  // Цвета
+  --color-white: #fff;
+  --color-white-58: rgba(255, 255, 255, 0.58);
+  --color-blue: #2D59F4;
+  --color-blue-20: rgba(45, 89, 244, 0.2);
+  --color-green: #abff1a;
+  --color-black: #000;
+  --color-black-30: rgba(0, 0, 0, 0.3);
+
+  // Ширина контейнера
+  --container-width: #{toRem(1240)};
+  --container-limitation: #{toRem(40)};
+
+  // Отступы
+  --section-bottom: #{toRem(80)};
+  --padding-scroll: #{toRem(140)};
+
+  // Высота шапки по умолчанию
+  --header-size: #{toRem(100)};
+
+  // Шрифты
+  --font-default: "Montserrat", sans-serif;
+
+  // Скорость анимации по умолчанию
+  --effect-transition: all 0.5s;
+
+  // root size html
+  --font-size-def: 1px; // Не забываем поменять число в функции toRem();
+}

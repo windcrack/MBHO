@@ -1,0 +1,54 @@
+.btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 0.1rem;
+  border-radius: toRem(50);
+
+  color: var(--color-white);
+  font-family: var(--font-default);
+  font-size: toRem(16);
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+
+  &_hero{
+    background: var(--color-green);
+
+    padding-inline: toRem(30);
+    line-height: toRem(78);
+
+    font-weight: 700;
+    font-size: toRem(40);
+    text-transform: uppercase;
+    color: var(--color-blue);
+  }
+
+  &_tab{
+    border-radius: toRem(50);
+    width: toRem(84);
+    height: toRem(40);
+    background: var(--color-white);
+
+    &.active{
+      background: var(--color-green);
+    }
+
+    font-weight: 700;
+    font-size: toRem(20);
+    font-variant: small-caps;
+    color: var(--color-blue);
+  }
+
+  &_card{
+    background: var(--color-green);
+    line-height: toRem(40);
+    padding-inline: toRem(30);
+
+    color: var(--color-blue);
+    font-weight: 700;
+    font-size: toRem(16);
+    text-transform: uppercase;
+  }
+}

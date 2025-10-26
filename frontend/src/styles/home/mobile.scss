@@ -1,0 +1,360 @@
+@include max-width(850px){
+  .hero{
+    height: toRem(860);
+
+    .lines{
+      right: toRem(110);
+
+      svg{
+        width: toRem(480);
+        height: toRem(720);
+      }
+    }
+  }
+
+  .hero-info{
+    margin-block: toRem(50) toRem(30);
+    //height: 100%;
+    gap: toRem(10);
+
+    &__button{
+      margin-top: auto;
+    }
+  }
+
+  .hero-image{
+    width: toRem(630);
+    height: toRem(570);
+    margin-right: -90rem;
+    align-self: end;
+    margin-bottom: toRem(60);
+  }
+
+  .home-advantages{
+    padding-block: toRem(40);
+
+    &__body{
+      grid-template-columns: repeat(4, 1fr);
+      gap: toRem(35) toRem(32);
+    }
+  }
+
+  .home-advantage{
+    gap: toRem(10);
+    padding: toRem(12);
+    min-height: toRem(160);
+    border-radius: toRem(30);
+
+    &__header{
+      & > :nth-child(1 of .icon){
+        @include square(toRem(32));
+      }
+
+      & > :nth-child(2 of .icon){
+        @include square(toRem(20));
+      }
+    }
+
+    &__title,
+    &__text{
+      font-size: toRem(10);
+    }
+  }
+
+  .home-tariffs{
+    padding-block: toRem(35) toRem(100);
+
+    &__section-header{
+      margin-bottom: toRem(30);
+    }
+
+    &__location-title{
+      font-size: toRem(15);
+    }
+
+    &__filters{
+      gap: toRem(10);
+      margin-bottom: toRem(34);
+    }
+
+    &__tabs{
+      gap: toRem(10);
+    }
+  }
+
+  .home-tariff{
+    &__slider{
+      width: 100vw;
+      padding-inline: toRem(20) toRem(20);
+      margin-inline: calc(-50vw + 50%);
+
+      .swiper-slide{
+        max-width: toRem(376);
+      }
+    }
+
+    &__list{
+      margin-bottom: toRem(14);
+    }
+  }
+
+  .home-connect{
+    .chip-bg{
+      display: none;
+    }
+  }
+
+  .home-question{
+    margin-bottom: toRem(40);
+
+    &__section-header{
+      margin-bottom: toRem(40);
+    }
+  }
+
+}
+
+@include max-width(600px){
+  .hero{
+    height: toRem(564);
+
+    .lines{
+      rotate: -23deg;
+      top: toRem(160);
+      right: toRem(95);
+
+      svg{
+        width: toRem(220);
+        height: toRem(325);
+      }
+    }
+  }
+
+  .hero-info{
+    gap: toRem(20);
+
+    .sub-title{
+      width: min(225rem, 100%);
+    }
+  }
+
+  .hero-image{
+    width: toRem(380);
+    height: toRem(350);
+    padding: 0;
+    margin-bottom: toRem(16);
+    margin-right: -30rem;
+    rotate: -4deg;
+
+    //.pict{
+    //  object-fit: contain;
+    //}
+  }
+
+  .home-advantages{
+    padding-block: toRem(30);
+
+    &__body{
+      grid-template-columns: repeat(2, 1fr);
+      gap: toRem(25) toRem(30);
+    }
+  }
+
+  .home-advantage{
+    padding: toRem(15);
+
+    &__header{
+      & > :nth-child(1 of .icon){
+        @include square(toRem(22));
+      }
+    }
+
+    &__info{}
+  }
+
+  .home-tariffs{
+    padding-block: toRem(40);
+    margin-bottom: toRem(30);
+
+    &__filters{
+      flex-flow: column;
+      row-gap: toRem(14);
+    }
+
+    &__location-title{
+      font-size: toRem(12);
+    }
+
+    &__section-header{
+      margin-bottom: toRem(20);
+    }
+  }
+
+  .home-tariff{
+    &__slider{
+      margin-bottom: toRem(20);
+
+      .swiper-slide{
+        max-width: toRem(300);
+      }
+    }
+
+    &__filters{
+      margin-bottom: toRem(30);
+    }
+
+    &__card{
+      padding: toRem(20);
+      height: toRem(360);
+    }
+
+    &__title{
+      font-size: toRem(14);
+    }
+
+    &__header{
+      margin-bottom: toRem(15);
+      .icon{
+        width: toRem(32);
+      }
+    }
+
+    &__bg{
+      @include square(toRem(80));
+
+      svg{
+        @include square(inherit);
+      }
+    }
+
+    &__row{
+      width: min(141rem, 100%);
+      height: toRem(24);
+
+      &:after{
+        font-size: toRem(8);
+
+        width: min(104rem, 100%);
+      }
+
+      .icon{
+        @include square(toRem(24));
+
+        svg{
+          @include square(inherit);
+        }
+      }
+    }
+
+    &__row-title{
+      font-size: toRem(8);
+    }
+
+    &__row-text{
+      font-size: toRem(12);
+    }
+
+    &__list{
+      margin-bottom: toRem(20);
+    }
+
+    &__item{
+      font-size: toRem(10);
+    }
+
+    &__price{
+      font-size: toRem(16);
+    }
+  }
+
+  .home-connect{
+    margin-bottom: toRem(20);
+    &__section-header{
+      margin: 0 auto toRem(20);
+      justify-content: center;
+    }
+
+    &__icons{
+      display: none;
+    }
+
+    &__info{
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-areas: 'icons title' "text text";
+      gap: toRem(5) toRem(10);
+      align-items: center;
+
+      .home-connect{
+        &__icons{
+          grid-area: icons;
+          display: flex;
+        }
+
+        &__icon{
+          @include square(toRem(30));
+
+          .icon{
+            @include square(toRem(30));
+          }
+        }
+
+        &__simbol{
+          font-size: toRem(16);
+          translate: 0 -25%;
+        }
+      }
+    }
+
+    &__title{
+      grid-area: title;
+
+      font-size: toRem(15);
+    }
+
+    &__text{
+      grid-area: text;
+      padding-top: toRem(15);
+
+      font-size: toRem(10);
+      line-height: 122%;
+    }
+
+    &__card{
+      border-radius: toRem(30);
+      padding: toRem(12) toRem(20) toRem(20);
+    }
+  }
+
+  .home-question{
+    margin-bottom: toRem(30);
+
+    &__section-header{
+      margin-bottom: toRem(26);
+    }
+
+    &__title{
+      font-size: toRem(9);
+      line-height: 150%;
+    }
+
+    &__header{
+      padding-inline: toRem(4) toRem(10);
+      padding-bottom: toRem(10);
+
+      .icon{
+        @include square(toRem(10));
+        display: block;
+
+        svg{
+          display: block;
+          @include square(inherit);
+        }
+      }
+    }
+
+    &__body{
+      font-size: toRem(14);
+    }
+  }
+}
