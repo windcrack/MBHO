@@ -205,317 +205,2705 @@ require_once __DIR__ . '/parts/header.php';
                                     <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/select-icon.svg"); ?>
                                 </span>
                             </summary>
-                            <div class="select__body">
-                                <div class="select__text">Тбилисская</div>
-                                <div class="select__text">Тбилисская 2</div>
+                            <div class="select__body js-select-body">
+                                <div class="select__text" data-text-val="1">Тбилисская 1</div>
+                                <div class="select__text" data-text-val="2">Тбилисская 2</div>
+                                <div class="select__text" data-text-val="3">Тбилисская 3</div>
                             </div>
                         </details>
                     </div>
-                    <div class="home-tariffs__tabs tabs">
-                        <button class="btn btn_tab active">2в1</button>
-                        <button class="btn btn_tab">3в1</button>
-                        <button class="btn btn_tab">4в1</button>
+                    <div class="home-tariffs__tabs tabs js-tabs-home-tariffs">
+                        <button class="btn btn_tab active" data-tab-name="2x1-1">2в1</button>
+                        <button class="btn btn_tab" data-tab-name="3x1-1">3в1</button>
+                        <button class="btn btn_tab" data-tab-name="4x1-1">4в1</button>
                     </div>
                 </div>
-                <div class="home-tariffs__body">
-                    <div class="home-tariff">
-                        <div class="home-tariff__slider swiper js-slider-home-tariff">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="home-tariff__card">
-                                        <div class="home-tariff__header">
-                                            <div class="home-tariff__title">
-                                                ТАРИФ 2 в 1
-                                            </div>
-                                            <div class="home-tariff__icons">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                <div class="home-tariffs__settlement js-home-tariffs-settlement">
+
+                    <details class="home-tariffs__body js-home-tariffs-body-1" open name="settlement">
+                        <summary>Тбилисская 1</summary>
+                        <div class="home-tariff" data-content-name="2x1-1">
+                            <div class="home-tariff__slider swiper js-slider-home-tariff">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 2 в 1
                                                 </div>
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="home-tariff__content">
-                                            <div class="home-tariff__bg">
-                                                <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
-                                            </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
-                                                </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Домашний интернет
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
                                                     </div>
-                                                    <div class="home-tariff__row-text">
-                                                        200 Мб/c
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
                                                 </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Звонки
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
                                                     </div>
-                                                    <div class="home-tariff__row-text">
-                                                        300 мин
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
-                                                </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Мобильный интернет
-                                                    </div>
-                                                    <div class="home-tariff__row-text">
-                                                        50 Гб
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
-                                                </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Cмс
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
                                                     </div>
-                                                    <div class="home-tariff__row-text">
-                                                        300 шт
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="home-tariff__list">
-                                            <div class="home-tariff__item">Переход с сохранением номера</div>
-                                            <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
-                                            <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
-                                        </div>
-                                        <div class="home-tariff__footer">
-                                            <div class="home-tariff__price">390 ₽/мес</div>
-                                            <div class="home-tariff__button">
-                                                <button class="btn btn_card">подключить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="home-tariff__card">
-                                        <div class="home-tariff__header">
-                                            <div class="home-tariff__title">
-                                                ТАРИФ 2 в 1
-                                            </div>
-                                            <div class="home-tariff__icons">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
-                                                </div>
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
-                                                </div>
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="home-tariff__content">
-                                            <div class="home-tariff__bg">
-                                                <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
-                                            </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
-                                                </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Домашний интернет
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
                                                     </div>
-                                                    <div class="home-tariff__row-text">
-                                                        200 Мб/c
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
-                                                </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Звонки
-                                                    </div>
-                                                    <div class="home-tariff__row-text">
-                                                        300 мин
-                                                    </div>
-                                                </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
                                             </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
                                                 </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Мобильный интернет
-                                                    </div>
-                                                    <div class="home-tariff__row-text">
-                                                        50 Гб
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
-                                                </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Cмс
-                                                    </div>
-                                                    <div class="home-tariff__row-text">
-                                                        300 шт
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
-                                                </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Комбо Лайт
-                                                    </div>
-                                                    <div class="home-tariff__row-text">
-                                                        до 190 каналов
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="home-tariff__list">
-                                            <div class="home-tariff__item">Переход с сохранением номера</div>
-                                            <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
-                                            <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
-                                        </div>
-                                        <div class="home-tariff__footer">
-                                            <div class="home-tariff__price">390 ₽/мес</div>
-                                            <div class="home-tariff__button">
-                                                <button class="btn btn_card">подключить</button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="home-tariff__card">
-                                        <div class="home-tariff__header">
-                                            <div class="home-tariff__title">
-                                                ТАРИФ 2 в 1
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 2 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="home-tariff__icons">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
                                                 </div>
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Лайт
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 190 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="home-tariff__content">
-                                            <div class="home-tariff__bg">
-                                                <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
-                                            </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 2 в 1
                                                 </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Домашний интернет
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
                                                     </div>
-                                                    <div class="home-tariff__row-text">
-                                                        200 Мб/c
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
-                                                </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Звонки
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
                                                     </div>
-                                                    <div class="home-tariff__row-text">
-                                                        300 мин
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
                                                 </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Мобильный интернет
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
                                                     </div>
-                                                    <div class="home-tariff__row-text">
-                                                        50 Гб
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Микс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 290 каналов
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="home-tariff__row">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
-                                                </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Cмс
-                                                    </div>
-                                                    <div class="home-tariff__row-text">
-                                                        300 шт
-                                                    </div>
-                                                </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
                                             </div>
-                                            <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
-                                                <div class="icon">
-                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
                                                 </div>
-                                                <div class="home-tariff__row-info">
-                                                    <div class="home-tariff__row-title">
-                                                        Комбо Микс
-                                                    </div>
-                                                    <div class="home-tariff__row-text">
-                                                        до 290 каналов
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="home-tariff__list">
-                                            <div class="home-tariff__item">Переход с сохранением номера</div>
-                                            <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
-                                            <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
-                                        </div>
-                                        <div class="home-tariff__footer">
-                                            <div class="home-tariff__price">390 ₽/мес</div>
-                                            <div class="home-tariff__button">
-                                                <button class="btn btn_card">подключить</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="home-tariff__pagination js-pagination-home-tariff"></div>
                         </div>
-                        <div class="home-tariff__pagination js-pagination-home-tariff"></div>
-                    </div>
+                        <div class="home-tariff" data-content-name="3x1-1">
+                            <div class="home-tariff__slider swiper js-slider-home-tariff">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 3 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 3 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Лайт
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 190 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 3 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Микс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 290 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-tariff__pagination js-pagination-home-tariff"></div>
+                        </div>
+                        <div class="home-tariff" data-content-name="4x1-1">
+                            <div class="home-tariff__slider swiper js-slider-home-tariff">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 4 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 4 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Лайт
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 190 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 4 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Микс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 290 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-tariff__pagination js-pagination-home-tariff"></div>
+                        </div>
+                    </details>
+                    <details  class="home-tariffs__body js-home-tariffs-body-2" name="settlement">
+                        <summary>Тбилисская 2</summary>
+                        <div class="home-tariff" data-content-name="2x1-2">
+                            <div class="home-tariff__slider swiper js-slider-home-tariff">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 2 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 2 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Лайт
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 190 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 2 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Микс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 290 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-tariff__pagination js-pagination-home-tariff"></div>
+                        </div>
+                        <div class="home-tariff" data-content-name="3x1-2">
+                            <div class="home-tariff__slider swiper js-slider-home-tariff">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 3 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 3 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Лайт
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 190 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 3 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Микс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 290 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-tariff__pagination js-pagination-home-tariff"></div>
+                        </div>
+                        <div class="home-tariff" data-content-name="4x1-2">
+                            <div class="home-tariff__slider swiper js-slider-home-tariff">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 4 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 4 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Лайт
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 190 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 4 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Микс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 290 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-tariff__pagination js-pagination-home-tariff"></div>
+                        </div>
+                    </details>
+                    <details class="home-tariffs__body js-home-tariffs-body-3" name="settlement">
+                        <summary>Тбилисская 3</summary>
+                        <div class="home-tariff" data-content-name="2x1-3">
+                            <div class="home-tariff__slider swiper js-slider-home-tariff">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 2 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 2 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Лайт
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 190 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 2 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Микс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 290 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-tariff__pagination js-pagination-home-tariff"></div>
+                        </div>
+                        <div class="home-tariff" data-content-name="3x1-3">
+                            <div class="home-tariff__slider swiper js-slider-home-tariff">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 3 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 3 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Лайт
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 190 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 3 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Микс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 290 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-tariff__pagination js-pagination-home-tariff"></div>
+                        </div>
+                        <div class="home-tariff" data-content-name="4x1-3">
+                            <div class="home-tariff__slider swiper js-slider-home-tariff">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 4 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 4 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Лайт
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 190 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="home-tariff__card">
+                                            <div class="home-tariff__header">
+                                                <div class="home-tariff__title">
+                                                    ТАРИФ 4 в 1
+                                                </div>
+                                                <div class="home-tariff__icons">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-blue.svg"); ?>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star-blue.svg"); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__content">
+                                                <div class="home-tariff__bg">
+                                                    <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/bg-tariff-card.svg"); ?>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Домашний интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            200 Мб/c
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/phone-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Звонки
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 мин
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/mob-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Мобильный интернет
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            50 Гб
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sms-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Cмс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            300 шт
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="home-tariff__row" data-row-info="+ Кинотеатр Premier">
+                                                    <div class="icon">
+                                                        <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/tv-bg.svg"); ?>
+                                                    </div>
+                                                    <div class="home-tariff__row-info">
+                                                        <div class="home-tariff__row-title">
+                                                            Комбо Микс
+                                                        </div>
+                                                        <div class="home-tariff__row-text">
+                                                            до 290 каналов
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-tariff__list">
+                                                <div class="home-tariff__item">Переход с сохранением номера</div>
+                                                <div class="home-tariff__item">Безлимит на мессенджеры, соцсети и т.д.</div>
+                                                <div class="home-tariff__item">Перенос остатков минут, SMS и интернета</div>
+                                            </div>
+                                            <div class="home-tariff__footer">
+                                                <div class="home-tariff__price">390 ₽/мес</div>
+                                                <div class="home-tariff__button">
+                                                    <button class="btn btn_card">подключить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-tariff__pagination js-pagination-home-tariff"></div>
+                        </div>
+                    </details>
                 </div>
+
             </div>
         </section>
         <section class="home-connect">

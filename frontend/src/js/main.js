@@ -1,6 +1,7 @@
 import { sliders } from "./module/sliders";
 import {toggleMenuMob} from "./module/mobile";
 import {InitSizeVar} from "./module/initSizeVar";
+import {Tabs} from "./module/tabs";
 
 (function() {
     /**
@@ -52,15 +53,70 @@ import {InitSizeVar} from "./module/initSizeVar";
 
 document.addEventListener("DOMContentLoaded", function (){
     const isMobile = window.matchMedia("(max-width: 850px)").matches;
+    /** Отключено за не надобностью */
+    // new InitSizeVar('header', {
+    //     spaceNameClass: '.top-space',
+    // });
 
-    new InitSizeVar('header', {
-        spaceNameClass: '.top-space',
-    });
-
+    // if(isMobile){
+    //     toggleMenuMob();
+    // }
+    /** ------------- */
     sliders();
 
-    if(isMobile){
-        toggleMenuMob();
+    try {
+        new Tabs({
+            tabsInit: '.js-tabs-home-tariffs',
+            contentInit: '.js-home-tariffs-body-1',
+            addActiveClassFirst: true
+        });
+
+        function changeTubs() {
+            const selectBody = document.querySelector('.js-select-body');
+            const selectText = selectBody.querySelectorAll('.select__text');
+            const details = document.querySelectorAll('.js-home-tariffs-settlement details');
+            const tarifTabs = document.querySelectorAll('.js-tabs-home-tariffs [data-tab-name]');
+            const selectTitle = selectBody.previousElementSibling.querySelector('.select__title');
+            // console.log(selectBody.previousElementSibling.querySelector('.select__title'));
+            selectText.forEach((text, index) => {
+                text.addEventListener('click', () => {
+                    const curTextVal = text.getAttribute('data-text-val');
+                    selectBody.closest('.select').removeAttribute('open');
+                    console.log(text);
+                    selectTitle.innerText = text.innerHTML.trim();
+
+
+                    // Скрываем все details
+                    details.forEach(detail => detail.removeAttribute('open'));
+                    // Показываем нужный
+                    details[index].setAttribute('open', '');
+
+                    // Меняем data-tab-name
+                    tarifTabs.forEach((item, indx) => {
+                        const defData = item.getAttribute('data-tab-name');
+
+                        // Проверяем, есть ли уже добавленное значение
+                        if (!defData.endsWith(`-${curTextVal}`)) {
+                            // Если было добавлено раньше другое значение, убираем его
+                            const baseName = defData.split('-')[0];
+                            item.setAttribute('data-tab-name', `${baseName}-${curTextVal}`);
+                        }
+
+                        if(indx === 0) item.click();
+                    });
+
+                    const tabs = new Tabs({
+                        tabsInit: '.js-tabs-home-tariffs',
+                        contentInit: `.js-home-tariffs-body-${curTextVal}`,
+                        addActiveClassFirst: true
+                    });
+                });
+            });
+        }
+
+        changeTubs();
+    }catch (e){
+        console.log(e)
     }
 
 });

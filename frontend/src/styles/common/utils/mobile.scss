@@ -7,7 +7,8 @@
     &__header{
       line-height: 27rem;
     }
-    &__title{
+    &__title,
+    &__text{
       font-size: toRem(15);
       font-weight: 400;
     }
@@ -36,7 +37,8 @@
       @include square(toRem(10));
     }
 
-    &__title{
+    &__title,
+    &__text{
       font-size: toRem(12);
     }
 
@@ -44,12 +46,6 @@
       border-width: toRem(1);
       padding: 10rem;
       border-radius: toRem(25);
-    }
-
-    &__text{
-      font-size: toRem(14);
-
-      font-weight: 400;
     }
   }
 }

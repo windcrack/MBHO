@@ -28,5 +28,27 @@ export function sliders(){
     }
 
     // new Swiper('.js-slider', options.example);
-    new Swiper('.js-slider-home-tariff', options.homeTariff);
+    const homeTariffSliders = document.querySelectorAll('.js-slider-home-tariff');
+    homeTariffSliders.forEach(slider => {
+        const sliderPagination = slider.nextElementSibling;
+        new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 54,
+            breakpoints:{
+                280: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 35,
+                    pagination: {
+                        el: sliderPagination,
+                        type: "progressbar",
+                    },
+                },
+                850:{
+                    slidesPerView: 3,
+                    spaceBetween: 54,
+                }
+            }
+        },);
+    })
+
 }
