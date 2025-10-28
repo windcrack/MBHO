@@ -136,7 +136,7 @@
 
 .home-tariffs{
   background: var(--color-blue);
-  padding-block: toRem(50);
+  padding-block: toRem(50) toRem(100);
   margin-bottom: toRem(34);
 
   &__section-header{
@@ -196,7 +196,7 @@
     background: var(--color-white);
     border-radius: toRem(50);
     padding: toRem(30);
-    height: toRem(440);
+    min-height: toRem(440);
     display: flex;
     flex-flow: column;
   }
@@ -462,7 +462,7 @@
 
     .home-connect{
       &__icons{
-        @include min-width(851px){
+        @include min-width(600px){
           display: none;
         }
       }

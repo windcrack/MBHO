@@ -62,7 +62,7 @@
   }
 
   .home-tariffs{
-    padding-block: toRem(35) toRem(100);
+    padding-block: toRem(35) toRem(60);
 
     &__section-header{
       margin-bottom: toRem(30);
@@ -205,7 +205,7 @@
 
     &__card{
       padding: toRem(20);
-      height: toRem(360);
+      min-height: toRem(360);
     }
 
     &__title{
