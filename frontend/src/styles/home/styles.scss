@@ -265,6 +265,7 @@
     display: flex;
     flex-flow: column;
     gap: toRem(6);
+    margin-bottom: toRem(25);
   }
 
   &__bg{

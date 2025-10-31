@@ -203,6 +203,11 @@
 
       .swiper-slide{
         max-width: toRem(300);
+        height: auto !important;
+      }
+
+      .swiper-wrapper{
+        align-items: stretch;
       }
     }
 
@@ -213,6 +218,7 @@
     &__card{
       padding: toRem(20);
       min-height: toRem(360);
+      height: 100%;
     }
 
     &__title{
@@ -299,8 +305,8 @@
         }
 
         &__icon{
-          @include square(toRem(30));
-
+          //@include square(toRem(30));
+          width: toRem(30);
           .icon{
             @include square(toRem(30));
           }
@@ -321,7 +327,7 @@
 
     &__text{
       grid-area: text;
-      padding-top: toRem(15);
+      //padding-top: toRem(15);
 
       font-size: toRem(10);
       line-height: 122%;
@@ -341,15 +347,18 @@
     }
 
     &__title{
-      font-size: toRem(9);
+      font-size: toRem(14);
       line-height: 150%;
     }
 
     &__header{
       padding-inline: toRem(4) toRem(10);
       padding-bottom: toRem(10);
+      align-items: flex-start;
+      gap: toRem(10);
 
       .icon{
+        margin-top: toRem(7);
         @include square(toRem(10));
         display: block;
 
@@ -363,5 +372,10 @@
     &__body{
       font-size: toRem(14);
     }
+
+    &__wrap{
+      gap: toRem(10);
+    }
+
   }
 }

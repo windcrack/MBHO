@@ -27,6 +27,13 @@
   }
 
   .select{
+    //&[open]{
+    //  .select{
+    //    &__header{
+    //
+    //    }
+    //  }
+    //}
     &__header{
       line-height: toRem(20);
       padding-inline: toRem(15);
@@ -45,7 +52,8 @@
     &__body{
       border-width: toRem(1);
       padding: 10rem;
-      border-radius: toRem(25);
+      //border-radius: toRem(25);
+      border-radius: 0 0 toRem(25) toRem(25);
     }
   }
 }

@@ -87,6 +87,11 @@
         transform: rotate(180deg);
         transform-origin: center;
       }
+
+      &__header{
+        border-radius: toRem(50) toRem(50) 0 0;
+        border-bottom: none;
+      }
     }
   }
 
@@ -132,7 +137,7 @@
     background: var(--color-blue);
     border: toRem(3) solid var(--color-white);
     padding: toRem(5) toRem(36);
-    border-radius: toRem(50);
+    border-radius: 0 0 toRem(50) toRem(50);
     display: flex;
     flex-flow: column;
     gap: toRem(10);
