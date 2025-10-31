@@ -30,7 +30,8 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="icon">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim.svg") ?>
                             </div>
-                            <div class="icon">
+                            <div class="icon js-icon-info-text" info-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, velit!">
+
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/info.svg") ?>
                             </div>
                         </div>
@@ -51,7 +52,7 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="icon">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/wifi.svg") ?>
                             </div>
-                            <div class="icon">
+                            <div class="icon js-icon-info-text" info-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, velit!">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/info.svg") ?>
                             </div>
                         </div>
@@ -71,7 +72,7 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="icon">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/cardId.svg") ?>
                             </div>
-                            <div class="icon">
+                            <div class="icon js-icon-info-text" info-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, velit!">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/info.svg") ?>
                             </div>
                         </div>
@@ -93,7 +94,7 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="icon">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/staff.svg") ?>
                             </div>
-                            <div class="icon">
+                            <div class="icon js-icon-info-text" info-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, velit!">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/info.svg") ?>
                             </div>
                         </div>
@@ -114,7 +115,7 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="icon">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/gb.svg") ?>
                             </div>
-                            <div class="icon">
+                            <div class="icon js-icon-info-text" info-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, velit!">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/info.svg") ?>
                             </div>
                         </div>
@@ -135,7 +136,7 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="icon">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/star.svg") ?>
                             </div>
-                            <div class="icon">
+                            <div class="icon js-icon-info-text" info-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, velit!">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/info.svg") ?>
                             </div>
                         </div>
@@ -153,7 +154,7 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="icon">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/people.svg") ?>
                             </div>
-                            <div class="icon">
+                            <div class="icon js-icon-info-text" info-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, velit!">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/info.svg") ?>
                             </div>
                         </div>
@@ -171,7 +172,7 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="icon">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/world.svg") ?>
                             </div>
-                            <div class="icon">
+                            <div class="icon js-icon-info-text" info-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, velit!">
                                 <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/info.svg") ?>
                             </div>
                         </div>

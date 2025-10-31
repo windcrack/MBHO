@@ -167,6 +167,13 @@
       & > :nth-child(1 of .icon){
         @include square(toRem(22));
       }
+      & > :nth-child(2 of .icon){
+        &:before{
+          translate: -80%;
+          width: toRem(150);
+          font-size: toRem(12);
+        }
+      }
     }
 
     &__info{}

@@ -2,6 +2,7 @@ import { sliders } from "./module/sliders";
 import {toggleMenuMob} from "./module/mobile";
 import {InitSizeVar} from "./module/initSizeVar";
 import {Tabs} from "./module/tabs";
+import {showInfo} from "./module/showInfo";
 
 (function() {
     /**
@@ -115,6 +116,8 @@ document.addEventListener("DOMContentLoaded", function (){
         }
 
         changeTubs();
+
+        showInfo();
     }catch (e){
         console.log(e)
     }

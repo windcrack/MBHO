@@ -94,6 +94,7 @@
     justify-content: space-between;
 
     .icon{
+      position: relative;
       @include square(toRem(32));
 
       svg{
@@ -108,6 +109,32 @@
         @include square(inherit);
       }
     }
+    & > :nth-child(2 of .icon){
+      &:before{
+        position: absolute;
+        display: block;
+        width: toRem(200);
+        min-height: toRem(50);
+        border-radius: toRem(20);
+        border: toRem(1) solid var(--color-blue);
+        background: var(--color-white);
+        left: 0;
+        translate: -50%;
+        bottom: 100%;
+        padding: toRem(10);
+
+        color: var(--color-black);
+        font-size: toRem(14);
+      }
+
+      &.active{
+        &:before{
+          content: attr(info-text);
+        }
+      }
+    }
+
+
   }
 
   &__info{
