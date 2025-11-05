@@ -359,7 +359,7 @@
 
       .icon{
         margin-top: toRem(7);
-        @include square(toRem(10));
+        @include square(toRem(15));
         display: block;
 
         svg{

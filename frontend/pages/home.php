@@ -2999,7 +2999,7 @@ require_once __DIR__ . '/parts/header.php';
                     </div>
                     <div class="home-connect__info">
                         <div class="home-connect__icons">
-                            <div class="home-connect__icon">
+                            <div class="home-connect__icon white">
                                 <div class="icon">
                                     <?= file_get_contents($_SERVER["DOCUMENT_ROOT"]."/frontend/src/svg/sim.svg"); ?>
                                 </div>
