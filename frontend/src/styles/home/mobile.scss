@@ -228,7 +228,8 @@
     &__header{
       margin-bottom: toRem(15);
       .icon{
-        width: toRem(32);
+        //width: toRem(32);
+        @include square(toRem(32));
       }
     }
 
