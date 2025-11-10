@@ -216,7 +216,7 @@
     }
 
     &__card{
-      padding: toRem(20);
+      padding: toRem(16);
       min-height: toRem(360);
       height: 100%;
     }
@@ -227,9 +227,12 @@
 
     &__header{
       margin-bottom: toRem(15);
+    }
+
+    &__icons{
       .icon{
         //width: toRem(32);
-        @include square(toRem(32));
+        @include square(toRem(22));
       }
     }
 

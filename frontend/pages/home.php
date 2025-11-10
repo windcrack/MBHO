@@ -207,9 +207,9 @@ require_once __DIR__ . '/parts/header.php';
                                 </span>
                             </summary>
                             <div class="select__body js-select-body">
-                                <div class="select__text" data-text-val="1">Тбилисская 1</div>
-                                <div class="select__text" data-text-val="2">Тбилисская 2</div>
-                                <div class="select__text" data-text-val="3">Тбилисская 3</div>
+                                <div class="select__text" data-text-val="1">Семикаракорск</div>
+                                <div class="select__text" data-text-val="2">Миллерово</div>
+                                <div class="select__text" data-text-val="3">Апшеронск</div>
                             </div>
                         </details>
                     </div>
@@ -220,7 +220,6 @@ require_once __DIR__ . '/parts/header.php';
                     </div>
                 </div>
                 <div class="home-tariffs__settlement js-home-tariffs-settlement">
-
                     <details class="home-tariffs__body js-home-tariffs-body-1" open name="settlement">
                         <summary>Тбилисская 1</summary>
                         <div class="home-tariff" data-content-name="2x1-1">
@@ -230,7 +229,7 @@ require_once __DIR__ . '/parts/header.php';
                                         <div class="home-tariff__card">
                                             <div class="home-tariff__header">
                                                 <div class="home-tariff__title">
-                                                    ТАРИФ 2 в 1
+                                                    Мобайл 300 HD+
                                                 </div>
                                                 <div class="home-tariff__icons">
                                                     <div class="icon">
@@ -416,7 +415,7 @@ require_once __DIR__ . '/parts/header.php';
                                         <div class="home-tariff__card">
                                             <div class="home-tariff__header">
                                                 <div class="home-tariff__title">
-                                                    ТАРИФ 2 в 1
+                                                    Мобайл 300 HD+
                                                 </div>
                                                 <div class="home-tariff__icons">
                                                     <div class="icon">
@@ -2904,7 +2903,6 @@ require_once __DIR__ . '/parts/header.php';
                         </div>
                     </details>
                 </div>
-
             </div>
         </section>
         <section class="home-connect">
