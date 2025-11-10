@@ -157,7 +157,7 @@
     &__body{
       //grid-template-columns: repeat(2, 1fr);
       //gap: toRem(25) toRem(30);
-      gap: toRem(20);
+      gap: toRem(20) toRem(10);
       display: flex;
       flex-flow: wrap;
     }
