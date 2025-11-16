@@ -155,17 +155,17 @@
     padding-block: toRem(30);
 
     &__body{
-      //grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       //gap: toRem(25) toRem(30);
       gap: toRem(20) toRem(10);
-      display: flex;
-      flex-flow: wrap;
+      //display: flex;
+      //flex-flow: wrap;
     }
   }
 
   .home-advantage{
     padding: toRem(15);
-    width: calc((100% / 2) - 10px);
+    //width: calc((100% / 2) - 10px);
 
     &__header{
       & > :nth-child(1 of .icon){
