@@ -27,12 +27,12 @@
   }
 
   .select{
-    width: toRem(130);
+    width: toRem(180);
     &__header{
       line-height: toRem(20);
       padding-inline: toRem(15);
       border-width: toRem(1);
-      width: toRem(130);
+      width: toRem(180);
     }
 
     &__icon{
@@ -41,7 +41,7 @@
 
     &__title,
     &__text{
-      font-size: toRem(12);
+      font-size: toRem(14);
     }
 
     &__body{

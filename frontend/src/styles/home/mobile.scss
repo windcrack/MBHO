@@ -191,7 +191,7 @@
     }
 
     &__location-title{
-      font-size: toRem(12);
+      font-size: toRem(14);
     }
 
     &__section-header{
@@ -218,7 +218,7 @@
     }
 
     &__card{
-      padding: toRem(16);
+      padding: toRem(25);
       min-height: toRem(360);
       height: 100%;
     }
@@ -247,13 +247,17 @@
     }
 
     &__row{
-      width: min(141rem, 100%);
+      //width: min(141rem, 100%);
+      width: min(200rem, 100%);
+      //width: fit-content;
+      //padding-right: toRem(4);
       height: toRem(24);
 
       &:after{
         font-size: toRem(8);
 
         width: min(104rem, 100%);
+        left: calc(100% - 34rem);
       }
 
       .icon{
@@ -266,11 +270,13 @@
     }
 
     &__row-title{
-      font-size: toRem(8);
+      //font-size: toRem(8);
+      font-size: toRem(12);
     }
 
     &__row-text{
-      font-size: toRem(12);
+      //font-size: toRem(12);
+      font-size: toRem(14);
     }
 
     &__list{
@@ -278,7 +284,7 @@
     }
 
     &__item{
-      font-size: toRem(10);
+      //font-size: toRem(10);
     }
 
     &__price{
@@ -335,7 +341,7 @@
       grid-area: text;
       //padding-top: toRem(15);
 
-      font-size: toRem(12);
+      font-size: toRem(14);
       line-height: 122%;
     }
 
