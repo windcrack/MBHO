@@ -164,7 +164,8 @@
   }
 
   .home-advantage{
-    padding: toRem(15);
+    padding: toRem(15) toRem(20);
+    min-height: inherit;
     //width: calc((100% / 2) - 10px);
 
     &__header{
@@ -188,6 +189,7 @@
     &__filters{
       flex-flow: column;
       row-gap: toRem(14);
+      margin-bottom: toRem(30);
     }
 
     &__location-title{
@@ -213,33 +215,33 @@
       }
     }
 
-    &__filters{
-      margin-bottom: toRem(30);
-    }
-
     &__card{
-      padding: toRem(16);
+      padding: toRem(18);
       min-height: toRem(360);
       height: 100%;
     }
 
     &__title{
       font-size: toRem(14);
+      line-height: 1;
     }
 
     &__header{
-      margin-bottom: toRem(15);
+      margin-bottom: toRem(18);
+      align-items: flex-end;
     }
 
     &__icons{
       .icon{
         //width: toRem(32);
-        @include square(toRem(22));
+        @include square(toRem(25));
       }
     }
 
     &__bg{
       @include square(toRem(80));
+      right: toRem(4);
+      top: toRem(33);
 
       svg{
         @include square(inherit);
@@ -247,7 +249,7 @@
     }
 
     &__row{
-      width: min(141rem, 100%);
+      width: min(165rem, 100%);
       height: toRem(24);
 
       &:after{
@@ -257,7 +259,7 @@
       }
 
       .icon{
-        @include square(toRem(24));
+        @include square(toRem(30));
 
         svg{
           @include square(inherit);
@@ -266,23 +268,27 @@
     }
 
     &__row-title{
-      font-size: toRem(8);
+      font-size: toRem(9);
     }
 
     &__row-text{
-      font-size: toRem(12);
+      font-size: toRem(13);
     }
 
     &__list{
-      margin-bottom: toRem(20);
+      margin-block-end: toRem(10);
     }
 
     &__item{
-      font-size: toRem(10);
+      font-size: toRem(11);
     }
 
     &__price{
       font-size: toRem(16);
+    }
+
+    &__content{
+      margin-bottom: toRem(30);
     }
   }
 
@@ -364,7 +370,7 @@
       gap: toRem(10);
 
       .icon{
-        margin-top: toRem(7);
+        margin-top: toRem(3);
         @include square(toRem(15));
         display: block;
 
