@@ -361,12 +361,16 @@
       display: block;
       flex-shrink: 0;
       margin-right: toRem(8);
-      margin-top: toRem(5);
+      margin-top: toRem(2);
       @include square(toRem(12));
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M0 6C0 2.68629 2.68629 0 6 0C9.31369 0 12 2.68629 12 6C12 9.31369 9.31369 12 6 12C2.68629 12 0 9.31369 0 6ZM5.56751 8.29478L9.38569 4.47661L8.61431 3.70521L5.18182 7.13771L3.3857 5.34158L2.6143 6.11296L4.79612 8.29478C4.89842 8.39705 5.03716 8.45455 5.18182 8.45455C5.32647 8.45455 5.46524 8.39705 5.56751 8.29478Z" fill="%232D59F4" /%3E%3C/svg%3E');
+
+      @include min-width(851px){
+        margin-top: toRem(5);
+      }
     }
   }
 
