@@ -278,7 +278,7 @@
     top: 0;
     right: toRem(16);
     @include square(toRem(104));
-    display: none;
+    //display: none;
   }
 
   &__row{
@@ -286,8 +286,8 @@
     align-items: center;
     gap: toRem(10);
     background: var(--color-blue-20);
-    //width: min(176rem, 100%);
-    width: min(220rem, 100%);
+    width: min(176rem, 100%);
+    //width: min(220rem, 100%);
     border-radius: toRem(50);
     min-height: toRem(30);
     padding-block: toRem(1);
@@ -326,16 +326,16 @@
     opacity: 0.5;
 
     font-weight: 700;
-    //font-size: toRem(10);
-    font-size: toRem(14);
+    font-size: toRem(10);
+    //font-size: toRem(14);
     font-variant: small-caps;
     color: var(--color-black);
   }
 
   &__row-text{
     font-weight: 700;
-    //font-size: toRem(15);
-    font-size: toRem(16);
+    font-size: toRem(15);
+    //font-size: toRem(16);
     color: var(--color-black);
   }
 
