@@ -1,6 +1,7 @@
 <?php
 /** <title>Главная</title> */
 require_once __DIR__ . '/parts/header.php';
+$current_city = 'Апшеронск';
 ?>
 
 <main>
@@ -220,8 +221,8 @@ require_once __DIR__ . '/parts/header.php';
                     </div>
                 </div>
                 <div class="home-tariffs__settlement js-home-tariffs-settlement">
-                    <details class="home-tariffs__body js-home-tariffs-body-1" open name="settlement">
-                        <summary>Тбилисская 1</summary>
+                    <details class="home-tariffs__body js-home-tariffs-body-1" <?= $current_city == 'Миллерово' ? 'open' : ''; ?> name="settlement">
+                        <summary>Миллерово</summary>
                         <div class="home-tariff" data-content-name="2x1-1">
                             <div class="home-tariff__slider swiper js-slider-home-tariff">
                                 <div class="swiper-wrapper">
@@ -1114,8 +1115,8 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="home-tariff__pagination js-pagination-home-tariff"></div>
                         </div>
                     </details>
-                    <details  class="home-tariffs__body js-home-tariffs-body-2" name="settlement">
-                        <summary>Тбилисская 2</summary>
+                    <details  class="home-tariffs__body js-home-tariffs-body-2" <?= $current_city == 'Апшеронск' ? 'open' : ''; ?> name="settlement">
+                        <summary>Апшеронск</summary>
                         <div class="home-tariff" data-content-name="2x1-2">
                             <div class="home-tariff__slider swiper js-slider-home-tariff">
                                 <div class="swiper-wrapper">
@@ -2008,7 +2009,7 @@ require_once __DIR__ . '/parts/header.php';
                             <div class="home-tariff__pagination js-pagination-home-tariff"></div>
                         </div>
                     </details>
-                    <details class="home-tariffs__body js-home-tariffs-body-3" name="settlement">
+                    <?/*<details class="home-tariffs__body js-home-tariffs-body-3" name="settlement">
                         <summary>Тбилисская 3</summary>
                         <div class="home-tariff" data-content-name="2x1-3">
                             <div class="home-tariff__slider swiper js-slider-home-tariff">
@@ -2901,7 +2902,7 @@ require_once __DIR__ . '/parts/header.php';
                             </div>
                             <div class="home-tariff__pagination js-pagination-home-tariff"></div>
                         </div>
-                    </details>
+                    </details> */?>
                 </div>
             </div>
         </section>
