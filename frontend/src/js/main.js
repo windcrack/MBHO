@@ -177,9 +177,13 @@ document.addEventListener("DOMContentLoaded", function (){
                     details[index].setAttribute('open', '');
 
                     // Обновляем data-tab-name
-                    tarifTabs.forEach(item => {
+                    tarifTabs.forEach((item, indx) => {
                         const baseName = item.getAttribute('data-tab-name').split('-')[0];
                         item.setAttribute('data-tab-name', `${baseName}-${curTextVal}`);
+                        if(indx === 0) {
+                            console.log(indx === 0);
+                            item.click();
+                        };
                     });
 
                     // Инициализируем Tabs

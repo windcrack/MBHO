@@ -1,7 +1,7 @@
 <?php
 /** <title>Главная</title> */
 require_once __DIR__ . '/parts/header.php';
-$current_city = 'Апшеронск';
+$current_city = 'Миллерово';
 ?>
 
 <main>
