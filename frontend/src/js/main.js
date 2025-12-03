@@ -3,6 +3,7 @@ import {toggleMenuMob} from "./module/mobile";
 import {InitSizeVar} from "./module/initSizeVar";
 import {Tabs} from "./module/tabs";
 import {showInfo} from "./module/showInfo";
+import {log} from "uikit/src/js/api/log";
 
 (function() {
     /**
@@ -131,31 +132,28 @@ document.addEventListener("DOMContentLoaded", function (){
 
             // Находим detail с open
             const openedDetail = document.querySelector('.js-home-tariffs-settlement details[open]');
-
             if (openedDetail) {
-                // Вычисляем индекс открытого блока
-                const openedIndex = Array.from(details).indexOf(openedDetail);
+                // Получаем curTextVal из класса
+                const curTextVal = openedDetail.className.match(/js-home-tariffs-body-(\d+)/)?.[1];
+                if (curTextVal) {
+                    // Ищем селект по data-text-val
+                    const openedSelect = Array.from(selectText).find(t => t.getAttribute('data-text-val') === curTextVal);
+                    // console.log('openedSelect', openedSelect);
+                    if (openedSelect) {
+                        // console.log('openedSelect.innerText.trim()', openedSelect.innerText.trim());
+                        // selectTitle.innerText = openedSelect.innerHTML.trim();
 
-                if (openedIndex !== -1) {
-                    // Берём соответствующий пункт селекта
-                    const openedSelect = selectText[openedIndex];
-                    const curTextVal = openedSelect.getAttribute('data-text-val');
+                        tarifTabs.forEach(item => {
+                            const baseName = item.getAttribute('data-tab-name').split('-')[0];
+                            item.setAttribute('data-tab-name', `${baseName}-${curTextVal}`);
+                        });
 
-                    // Меняем заголовок селекта
-                    selectTitle.innerText = openedSelect.innerHTML.trim();
-
-                    // Синхронизируем data-tab-name
-                    tarifTabs.forEach(item => {
-                        const baseName = item.getAttribute('data-tab-name').split('-')[0];
-                        item.setAttribute('data-tab-name', `${baseName}-${curTextVal}`);
-                    });
-
-                    // Запускаем Tabs для активного города
-                    new Tabs({
-                        tabsInit: '.js-tabs-home-tariffs',
-                        contentInit: `.js-home-tariffs-body-${curTextVal}`,
-                        addActiveClassFirst: true
-                    });
+                        new Tabs({
+                            tabsInit: '.js-tabs-home-tariffs',
+                            contentInit: `.js-home-tariffs-body-${curTextVal}`,
+                            addActiveClassFirst: true
+                        });
+                    }
                 }
             }
 
@@ -170,20 +168,23 @@ document.addEventListener("DOMContentLoaded", function (){
                     selectTitle.innerText = text.innerHTML.trim();
 
                     // Закрываем ранее открытый detail
-                    const opened = document.querySelector('.js-home-tariffs-settlement details[open]');
-                    if (opened) opened.removeAttribute('open');
+                    // const opened = document.querySelector('.js-home-tariffs-settlement details[open]');
+                    // if (opened) opened.removeAttribute('open');
+                    details.forEach(d => d.removeAttribute('open'));
 
                     // Открываем новый нужный detail
-                    details[index].setAttribute('open', '');
+                    //details[index].setAttribute('open', '');
+
+                    // Открываем нужный detail по data-text-val
+                    const targetDetail = Array.from(details).find(d => d.classList.contains(`js-home-tariffs-body-${curTextVal}`));
+                    if (targetDetail) targetDetail.setAttribute('open', '');
+
 
                     // Обновляем data-tab-name
                     tarifTabs.forEach((item, indx) => {
                         const baseName = item.getAttribute('data-tab-name').split('-')[0];
                         item.setAttribute('data-tab-name', `${baseName}-${curTextVal}`);
-                        if(indx === 0) {
-                            console.log(indx === 0);
-                            item.click();
-                        };
+                        if(indx === 0) item.click();
                     });
 
                     // Инициализируем Tabs
@@ -195,6 +196,73 @@ document.addEventListener("DOMContentLoaded", function (){
                 });
             });
         }
+
+        // function changeTabs() {
+        //     const select = document.querySelector('.js-select-body')?.closest('.select');
+        //     const selectBody = select?.querySelector('.js-select-body');
+        //     const selectText = selectBody?.querySelectorAll('.select__text');
+        //     const details = document.querySelectorAll('.js-home-tariffs-settlement details');
+        //     const tarifTabs = document.querySelectorAll('.js-tabs-home-tariffs [data-tab-name]');
+        //     const selectTitle = select.querySelector('.select__title');
+        //
+        //     if (!selectBody || !selectText.length) return;
+        //
+        //     // ------------------------------------------
+        //     // 1. СИНХРОНИЗАЦИЯ ПРИ ЗАГРУЗКЕ
+        //     // ------------------------------------------
+        //     const openedDetail = document.querySelector('.js-home-tariffs-settlement details[open]');
+        //     if (openedDetail) {
+        //         const curTextVal = openedDetail.getAttribute('data-text-val');
+        //
+        //         // Устанавливаем текст в селект
+        //         const openedSelect = Array.from(selectText).find(t => t.getAttribute('data-text-val') === curTextVal);
+        //         if (openedSelect) selectTitle.innerText = openedSelect.innerHTML.trim();
+        //
+        //         // Обновляем табы
+        //         tarifTabs.forEach(item => {
+        //             const base = item.getAttribute('data-tab-name').split('-')[0];
+        //             item.setAttribute('data-tab-name', `${base}-${curTextVal}`);
+        //         });
+        //
+        //         new Tabs({
+        //             tabsInit: '.js-tabs-home-tariffs',
+        //             contentInit: `.js-home-tariffs-body-${curTextVal}`,
+        //             addActiveClassFirst: true
+        //         });
+        //     }
+        //
+        //     // ------------------------------------------
+        //     // 2. ОБРАБОТКА КЛИКА
+        //     // ------------------------------------------
+        //     selectText.forEach(text => {
+        //         text.addEventListener('click', () => {
+        //             const curTextVal = text.getAttribute('data-text-val');
+        //
+        //             select.removeAttribute('open');
+        //             selectTitle.innerText = text.innerHTML.trim();
+        //
+        //             // Закрываем все details
+        //             details.forEach(d => d.removeAttribute('open'));
+        //
+        //             // Открываем нужный detail по data-text-val
+        //             const targetDetail = Array.from(details).find(d => d.getAttribute('data-text-val') === curTextVal);
+        //             if (targetDetail) targetDetail.setAttribute('open', '');
+        //
+        //             // Обновляем табы
+        //             tarifTabs.forEach(item => {
+        //                 const base = item.getAttribute('data-tab-name').split('-')[0];
+        //                 item.setAttribute('data-tab-name', `${base}-${curTextVal}`);
+        //             });
+        //
+        //             // Инициализируем Tabs
+        //             new Tabs({
+        //                 tabsInit: '.js-tabs-home-tariffs',
+        //                 contentInit: `.js-home-tariffs-body-${curTextVal}`,
+        //                 addActiveClassFirst: true
+        //             });
+        //         });
+        //     });
+        // }
 
         changeTabs();
 

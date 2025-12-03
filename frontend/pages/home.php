@@ -209,8 +209,8 @@ $current_city = 'Миллерово';
                             </summary>
                             <div class="select__body js-select-body">
                                 <div class="select__text" data-text-val="1">Семикаракорск</div>
-                                <div class="select__text" data-text-val="2">Миллерово</div>
-                                <div class="select__text" data-text-val="3">Апшеронск</div>
+                                <div class="select__text" data-text-val="1">Миллерово</div>
+                                <div class="select__text" data-text-val="2">Апшеронск</div>
                             </div>
                         </details>
                     </div>
